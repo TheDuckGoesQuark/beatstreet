@@ -8,9 +8,9 @@ import './BrandHeader.css'
 export default class Brand extends React.Component {
     render() {
         return <header id="header">
-            <div class="container">
-                <h1>
-                    Beat Street
+            <div className="container">
+                <h1 className="brand">
+                    BeatStreet
                 </h1>
             </div>
         </header>;
