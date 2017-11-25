@@ -1,8 +1,8 @@
 .Background {
-  background: #34252F;
+  background: #6F8E96;
   height: 100%;
   width: 100%;
-  display: flex;
+  display: inline-block;
   align-items: center;
   justify-content: center;
   position: absolute;
@@ -16,13 +16,17 @@
   padding-left: 2vh;
   padding-right: 2vh;
   margin-bottom: 15vh;
+  cursor: pointer;
 }
+
 .Spotify-logo{
   display: inline-block;
   height: 9vh;
   vertical-align: middle;
   margin: 15px;
 }
+
+
 
 .skyline{
   margin-top: 120%;
@@ -34,7 +38,7 @@
 .Reverse-text{
   display: inline-block;
   text-wrap: normal;
-  color: #34252F;
+  color: #6F8E96;
   vertical-align: middle;
   font-size: 4vh;
 }

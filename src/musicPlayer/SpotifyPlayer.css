@@ -1,0 +1,96 @@
+.Bar {
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:20vh;
+    background: #526077;
+    display: flex;
+    align-items: center;
+}
+.ButtonHolder {
+    width: 10%;
+    margin-left: 1vh;
+    align-items: center;
+    justify-content: center;
+}
+.Background {
+    background: #6F8E96;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+.Play {
+    margin-left: 1vh;
+    width: 80%;
+
+}
+.Album {
+    height: 100%;
+    margin-right: 1vh;
+}
+.SmallButton {
+    height: 8vh;
+    margin: 3vh;
+    position: absolute;
+    bottom: -2vh;
+    justify-content: center;
+
+}
+
+.MediaInfo {
+    width: auto;
+}
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 5vh;
+    color: #F7F7F2;
+    margin: 3px;
+}
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3vh;
+    color: #F7F7F2;
+    margin: 3px;
+}
+
+@media only screen and (max-width: 700px) {
+    .Bar {
+        height:20vh;
+    }
+    .ButtonHolder {
+        margin-left: 0vh;
+        margin-right: 1vh;
+        width: 22%;
+    }
+    .Album {
+        height: 70%;
+    }
+}
+
+.viewport-slider-item {
+    align-items: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.viewport-slider-button {
+    color: #fff;
+    cursor: pointer;
+    opacity: 0;
+    padding: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: opacity .35s;
+
+}
+
+.viewport-slider-button:hover {
+    opacity: 0;
+}

@@ -6,12 +6,18 @@
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
     "react-scripts": "1.0.17",
-    "spotify-web-api-js": "^0.22.1"
+    "react-slick": "^0.15.4",
+    "react-transition-group": "^2.2.1",
+    "react-viewport-slider": "^1.0.0",
+    "reactstrap": "^4.8.0",
+    "slick-carousel": "^1.8.1",
+    "spotify-web-api-node": "^2.5.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "devDependencies": {}
 }
