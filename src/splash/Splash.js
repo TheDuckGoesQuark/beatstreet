@@ -4,7 +4,6 @@ import './Splash.css';
 class Splash extends Component {
     spotifyHandle(){
         console.log('Calling out to a spotify near you.');
-
     }
     render() {
         return (

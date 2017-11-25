@@ -22,7 +22,6 @@ class SpotifyPlayer extends Component {
     }
     render() {
         return (
-
             <Slider>
                 <Slider.Item buttonLabel={'More Songs'} hideButton={true}>
                     <div className="Background">
@@ -37,29 +36,36 @@ class SpotifyPlayer extends Component {
                                 <h2>Artist Name</h2>
                             </div>
                         </div>
-                        <img className="SmallButton" src={require("../assets/arrow.svg")} />
+                        <img className="SmallButton" src={require("../assets/arrow.svg")} onClick={() => window.scrollTo(0,document.body.scrollHeight)} />
                     </div>
                 </Slider.Item>
                 <Slider.Item style={{ backgroundColor: '#526077' }}>
-                    <h1>Street</h1>
-                    <Card body inverse style={{margin:'5px', borderRadius: 15 ,width: '90%', backgroundColor: '#333', borderColor: '#333' }}>
-                        <CardTitle style={{marginLeft:'5%'}}>Special Title Treatment</CardTitle>
-                        <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                    </Card>
-                    <Card body inverse style={{margin:'5px', borderRadius: 15 ,width: '90%', backgroundColor: '#333', borderColor: '#333' }}>
-                        <CardTitle style={{marginLeft:'5%'}}>Special Title Treatment</CardTitle>
-                        <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                    </Card>
-                    <Card body inverse style={{margin:'5px', borderRadius: 15 ,width: '90%', backgroundColor: '#333', borderColor: '#333' }}>
-                        <CardTitle style={{marginLeft:'5%'}}>Special Title Treatment</CardTitle>
-                        <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                    </Card>
-                    <Card body inverse style={{margin:'5px', borderRadius: 15 ,width: '90%', backgroundColor: '#333', borderColor: '#333' }}>
-                        <CardTitle style={{marginLeft:'5%'}}>Special Title Treatment</CardTitle>
-                        <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                    </Card>
-
-
+                    <h1 className="TitleSecondScreen">Street</h1>
+                    <div className="AlternativeBox">
+                        <img className="Album" src={require("../assets/duffy.PNG")} />
+                        <div className="MediaInfo">
+                            <h1>Song Title</h1>
+                            <h2>Artist Name</h2>
+                            <h2>2015</h2>
+                        </div>
+                    </div>
+                    <div className="AlternativeBox">
+                        <img className="Album" src={require("../assets/duffy.PNG")} />
+                        <div className="MediaInfo">
+                            <h1>Song Title</h1>
+                            <h2>Artist Name</h2>
+                            <h2>2017</h2>
+                        </div>
+                    </div>
+                    <div className="AlternativeBox">
+                        <img className="Album" src={require("../assets/duffy.PNG")} />
+                        <div className="MediaInfo">
+                            <h1>Song Title</h1>
+                            <h2>Artist Name</h2>
+                            <h2>2014</h2>
+                        </div>
+                    </div>
+                    <h2 className="PoweredBy">Powered by StreetBeats.</h2>
                 </Slider.Item>
             </Slider>
         );
