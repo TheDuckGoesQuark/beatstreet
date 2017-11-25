@@ -1,0 +1,8 @@
+.footer {
+    z-index: 2;
+    position: absolute;
+    background: #222;
+    width: 100%;
+    top:90vh;
+    height: 10vh;
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Brand from '../assets/Brand';
+import './Mapview.css'
 
 export default class MapView extends React.Component {
     constructor(props) {
@@ -27,7 +28,7 @@ class Map extends React.Component {
 class Footer extends React.Component {
     render() {
         return <div className="footer">
-
+            <h1>Your song here</h1>
         </div>
     }
 }
