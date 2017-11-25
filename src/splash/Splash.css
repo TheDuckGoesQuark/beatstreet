@@ -1,0 +1,93 @@
+.Background {
+  background: #34252F;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+.Button {
+  border-radius: 12px;
+  background: #ffffff;
+  height: auto;
+  width: auto;
+  align-self: center;
+  padding-left: 2vh;
+  padding-right: 2vh;
+  margin-bottom: 15vh;
+}
+.Spotify-logo{
+  display: inline-block;
+  height: 9vh;
+  vertical-align: middle;
+  margin: 15px;
+}
+
+.skyline{
+  margin-top: 120%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.Reverse-text{
+  display: inline-block;
+  text-wrap: normal;
+  color: #34252F;
+  vertical-align: middle;
+  font-size: 4vh;
+}
+
+.h3-intro{
+  vertical-align: middle;
+  font-size: 4vh;
+  color: #F7F7F2;
+}
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1vw;
+  color: #F7F7F2;
+}
+h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 50px;
+  color: #F7F7F2;
+}
+.App {
+  text-align: center;
+
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 15vh;
+  font-family: 'Lobster', cursive;
+  margin: 1vh;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@media only screen and (max-width: 500px) {
+  .App-title {
+    font-size: 11vh;
+
+  }
+}
