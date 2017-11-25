@@ -39,12 +39,12 @@ class MapWrapper extends React.Component {
     }
 
     render() {
+        const marker = <Marker  coordinates={[this.state.longitude, this.state.latitude]}/>
         return <Map
             center={[this.state.longitude, this.state.latitude]}
             movingMethod="easeTo"
             style="mapbox://styles/jmackie97/cjafuc2397fki2snwdfereeko">
-            <Marker anchor="top" coordinates={[this.state.longitude, this.state.latitude]}/>
-            <Marker className="middle-marker" anchor="top" coordinates={[this.state.longitude, this.state.latitude]}/>
+            {marker}
         </Map>
     }
 }
