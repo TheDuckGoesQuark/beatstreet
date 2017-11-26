@@ -8,7 +8,7 @@ const Map = ReactMapboxGl({
     accessToken: "pk.eyJ1Ijoiam1hY2tpZTk3IiwiYSI6ImNqYWZuNXRmNjEzcm4yd3BicWtxdGJ0d3EifQ.xOgBLsHRujHPor8Fp1wBiQ",
     interactive: false,
     minZoom: 18,
-    maxZoom:18
+    maxZoom: 18
 });
 
 export default class MapView extends React.Component {
@@ -30,14 +30,14 @@ class MapWrapper extends React.Component {
     }
 
     componentDidMount() {
-        navigator.geolocation.getCurrentPosition((pos)=>{
+        navigator.geolocation.getCurrentPosition((pos) => {
             let coords = pos.coords;
             this.setState({longitude: coords.longitude, latitude: coords.latitude})
         });
     }
 
     render() {
-        const marker = <Marker  coordinates={[this.state.longitude, this.state.latitude]}/>
+        const marker = <Marker coordinates={[this.state.longitude, this.state.latitude]}/>;
         return <Map
             center={[this.state.longitude, this.state.latitude]}
             movingMethod="easeTo"

@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Splash from './splash/Splash.js';
+import App from './App';
 import registerServiceWorker from './registerServiceWorker';
-import SpotifyPlayer from "./musicPlayer/SpotifyPlayer";
 
-ReactDOM.render(<SpotifyPlayer />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
