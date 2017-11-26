@@ -14,9 +14,7 @@ const Map = ReactMapboxGl({
 export default class MapView extends React.Component {
     render() {
         return (<div className="container">
-            <Brand />
             <MapWrapper />
-            <Footer />
         </div>)
     }
 }
@@ -46,13 +44,5 @@ class MapWrapper extends React.Component {
             style="mapbox://styles/jmackie97/cjafuc2397fki2snwdfereeko">
             {marker}
         </Map>
-    }
-}
-
-class Footer extends React.Component {
-    render() {
-        return <div className="footer">
-            <h1>Your song here</h1>
-        </div>
     }
 }

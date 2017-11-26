@@ -6,6 +6,7 @@ import { Card, CardImg, CardText,
 import './SpotifyPlayer.css';
 import play from "../assets/play.svg";
 import pause from "../assets/pause.svg";
+import MapView from "../mapview/Mapview";
 
 class SpotifyPlayer extends Component {
     constructor(props) {
@@ -20,11 +21,14 @@ class SpotifyPlayer extends Component {
             this.setState({playSwitch: true, image: play});
         }
     }
+
     render() {
         return (
             <Slider>
                 <Slider.Item buttonLabel={'More Songs'} hideButton={true}>
+                    <h1 className="Brand">BeatStreet</h1>
                     <div className="Background">
+                        <MapView/>
                         <div className="Bar">
                             <div className="ButtonHolder">
                                 <img className="Play" onClick={() => this.pressSwitch()} src={this.state.image} />
@@ -65,7 +69,7 @@ class SpotifyPlayer extends Component {
                             <h2>2014</h2>
                         </div>
                     </div>
-                    <h2 className="PoweredBy">Powered by StreetBeats.</h2>
+                    <h2 className="PoweredBy">Powered by BeatStreet.</h2>
                 </Slider.Item>
             </Slider>
         );
