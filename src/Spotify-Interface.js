@@ -1,6 +1,6 @@
 import SpotifyWebApi from 'spotify-web-api-node';
 
-var overridAccToken = 'BQADCTT_PTys5c6zJS6HMqssjQWkxjv18SwkMz50iQBGuZgfca6EZPeu20uG6EHAx7ixB7Mw3sb3twnc4s7AkJmx-tkt-YkkpyzNQrTGgT96-GyQV42BmpXre8bXUrYh6OdMOwMmlVxL2CG8zWj5l0KothcOoqnEX_bS1p5zsK_ah_YCyoi7LBoPxB76p4_waQ';
+var overrideAccToken = null;
 
 export function getClientAuthorization() {
     var scopes = ['playlist-read-private', 'playlist-modify-private', 'streaming', 'user-read-playback-state', 'user-modify-playback-state', 'user-read-currently-playing'],
@@ -31,13 +31,15 @@ export function getClientAuthorization() {
 }
 
 export function setAccessToken(t) {
-    localStorage.setItem('accessToken', overridAccToken);
+    if (overrideAccToken == null) {
+        localStorage.setItem('accessToken', t);
+    } else {
+        localStorage.setItem('accessToken', overrideAccToken)
+    }
 }
 
 export function searchTracks(q) {
     var spotifyApi = new SpotifyWebApi();
-
-    localStorage.setItem('accessToken', overridAccToken);
 
     spotifyApi.setAccessToken(localStorage.getItem('accessToken'));
 
@@ -49,8 +51,6 @@ export function searchTracks(q) {
 export function getCurrentTrack() {
     var spotifyApi = new SpotifyWebApi();
 
-    localStorage.setItem('accessToken', overridAccToken);
-
     spotifyApi.setAccessToken(localStorage.getItem('accessToken'));
 
     var curTrack = spotifyApi.getMyCurrentPlayingTrack();
@@ -61,8 +61,6 @@ export function getCurrentTrack() {
 export function pauseSong() {
     var spotifyApi = new SpotifyWebApi();
 
-    localStorage.setItem('accessToken', overridAccToken);
-
     spotifyApi.setAccessToken(localStorage.getItem('accessToken'));
 
     spotifyApi.pause();
@@ -71,8 +69,6 @@ export function pauseSong() {
 export function resumeSong() {
     var spotifyApi = new SpotifyWebApi();
 
-    localStorage.setItem('accessToken', overridAccToken);
-
     spotifyApi.setAccessToken(localStorage.getItem('accessToken'));
 
     spotifyApi.play();
@@ -80,8 +76,6 @@ export function resumeSong() {
 
 export function playSongs(uris) {
     var spotifyApi = new SpotifyWebApi();
-
-    localStorage.setItem('accessToken', overridAccToken);
 
     spotifyApi.setAccessToken(localStorage.getItem('accessToken'));
 
