@@ -46,6 +46,8 @@ export function searchTracks(q) {
     var tracks = spotifyApi.searchTracks(q);
 
     console.log(tracks);
+
+    return tracks;
 }
 
 export function getCurrentTrack() {
@@ -56,6 +58,8 @@ export function getCurrentTrack() {
     var curTrack = spotifyApi.getMyCurrentPlayingTrack();
 
     console.log(curTrack);
+
+    return curTrack;
 }
 
 export function pauseSong() {
