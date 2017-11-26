@@ -13,7 +13,7 @@ class Splash extends Component {
                 <div className="App">
                     <h1 className="App-title">BeatStreet</h1>
                     <h3 className="h3-intro">Lets get you listening...</h3>
-                    <div onClick={()=>this.spotifyHandle('spotify:track:3UCDrOA37BBdcExyIpN3Xj')} className="Button">
+                    <div onClick={()=>spot.getClientAuthorization()} className="Button">
                         <h2 className="Reverse-text">Log in with Spotify</h2>
                         <img className="Spotify-logo" src={require("../assets/spotifyLogo.svg")} />
                     </div>
