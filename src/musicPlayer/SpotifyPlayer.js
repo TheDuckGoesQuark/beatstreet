@@ -34,9 +34,9 @@ class SpotifyPlayer extends Component {
                             </div>
                             <img className="Album" src={require("../assets/duffy.PNG")} />
                             <div className="MediaInfo">
-                                <h1>Street</h1>
-                                <h1>Song Title</h1>
-                                <h2>Artist Name</h2>
+                                <h1 className={"MusicSong"}>Street</h1>
+                                <h1 className={"MusicSong"}>Song Title</h1>
+                                <h2 className={"MusicArtist"}>Artist Name</h2>
                             </div>
                         </div>
                         <img className="SmallButton" src={require("../assets/arrow.svg")} onClick={() => window.scrollTo(0,document.body.scrollHeight)} />
@@ -55,9 +55,9 @@ class SpotifyPlayer extends Component {
                     <div className="AlternativeBox">
                         <img className="Album" src={require("../assets/duffy.PNG")} />
                         <div className="MediaInfo">
-                            <h1>Song Title</h1>
-                            <h2>Artist Name</h2>
-                            <h2>2017</h2>
+                            <h1 className="MusicSong">Song Title</h1>
+                            <h2 className="MusicArtist">Artist Name</h2>
+                            <h2 className="MusicArtist">2017</h2>
                         </div>
                     </div>
                     <div className="AlternativeBox">

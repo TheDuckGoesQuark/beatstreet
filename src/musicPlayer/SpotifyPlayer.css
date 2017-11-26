@@ -68,13 +68,27 @@
 }
 h1 {
     font-family: 'Roboto', sans-serif;
-    font-size: 5vh;
+    font-size: 5vw;
     color: #F7F7F2;
     margin: 3px;
 }
 h2 {
     font-family: 'Roboto', sans-serif;
-    font-size: 3vh;
+    font-size: 3vw;
+    color: #F7F7F2;
+    margin: 3px;
+}
+
+.MusicSong {
+    font-family: 'Roboto', sans-serif;
+    font-size: 5vw;
+    color: #F7F7F2;
+    margin: 3px;
+}
+
+.MusicArtist {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3vw;
     color: #F7F7F2;
     margin: 3px;
 }
