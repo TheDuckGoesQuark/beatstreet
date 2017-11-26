@@ -3,6 +3,10 @@ import './Splash.css';
 import * as spot from '../Spotify-Interface.js';
 
 class Splash extends Component {
+    spotifyHandle(){
+        spot.getClientAuthorization();
+    }
+
     render() {
         return (
             <div className="Background">
@@ -13,7 +17,6 @@ class Splash extends Component {
                         <h2 className="Reverse-text">Log in with Spotify</h2>
                         <img className="Spotify-logo" src={require("../assets/spotifyLogo.svg")} />
                     </div>
-
                 </div>
                 <img className="skyline" src={require("../assets/london-skyline.svg")} />
             </div>

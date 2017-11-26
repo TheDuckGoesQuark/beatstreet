@@ -1,21 +1,37 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+
+import SpotifyPlayer from './musicPlayer/SpotifyPlayer'
+import Splash from './splash/Splash'
+import * as spot from './Spotify-Interface'
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+    constructor(props) {
+        super(props);
+        this.state = {
+            loggedin: false
+        }
+    }
+
+    componentDidMount() {
+        let url = window.location.href;
+        let code = url.substring(url.indexOf("=")+1, url.indexOf("&"));
+        fetch("https://beatstreet.herokuapp.com/?userKey="+code).then((resp)=>{
+            spot.setAccessToken(resp.accessToken);
+            this.setState({loggedin:true})
+        })
+    }
+
+    handleLogin() {
+        this.setState({loggedin:true})
+    }
+
+    render() {
+        return (
+            <div>
+                {this.state.loggedin ? <SpotifyPlayer />: <Splash onlog ={()=>{this.handleLogin()}}/>}
+            </div>
+        );
+    }
 }
 
 export default App;
