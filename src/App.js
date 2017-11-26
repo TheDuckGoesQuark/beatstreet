@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import MapView from './mapview/Mapview'
+import SpotifyPlayer from './musicPlayer/SpotifyPlayer'
 import Splash from './splash/Splash'
 
 class App extends Component {
@@ -18,7 +18,7 @@ class App extends Component {
     render() {
         return (
             <div>
-                {this.state.loggedin ? <div className="App"><MapView /></div> : <Splash onlog ={()=>{this.handleLogin()}}/>}
+                {this.state.loggedin ? <SpotifyPlayer />: <Splash onlog ={()=>{this.handleLogin()}}/>}
             </div>
         );
     }
