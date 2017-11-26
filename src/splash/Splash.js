@@ -4,9 +4,9 @@ import * as spot from '../Spotify-Interface.js';
 
 class Splash extends Component {
     spotifyHandle(){
-        //spot.getClientAuthorization();
-        this.props.onlog();
+        spot.getClientAuthorization();
     }
+
     render() {
         return (
             <div className="Background">

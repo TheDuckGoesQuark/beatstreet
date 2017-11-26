@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import Slider from 'react-viewport-slider';
-import { Card, CardImg, CardText,
-    CardTitle, CardSubtitle, Button } from 'reactstrap';
 
 import './SpotifyPlayer.css';
 import play from "../assets/play.svg";

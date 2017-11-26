@@ -7,7 +7,6 @@ export function getClientAuthorization() {
         redirectUri = 'http://beatstreet.tech/',
         clientId = '1ee50d582cdf4b418e31e20189774f36',
         state = 'banter';
-    // hello
 
 // Setting credentials can be done in the wrapper's constructor, or using the API object's setters.
     var spotifyApi = new SpotifyWebApi({
