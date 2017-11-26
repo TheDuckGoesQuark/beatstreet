@@ -4,7 +4,7 @@ import * as spot from '../Spotify-Interface.js';
 
 class Splash extends Component {
     spotifyHandle(){
-        console.log('Calling out to a spotify near you.');
+        //spot.getClientAuthorization();
         this.props.onlog();
     }
     render() {

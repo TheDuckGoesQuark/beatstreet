@@ -13,6 +13,7 @@ class SpotifyPlayer extends Component {
         super(props);
         this.state = {playSwitch:  true, image: play};
     }
+
     pressSwitch(){
         if (this.state.playSwitch) {
             this.setState({playSwitch: false, image: pause});

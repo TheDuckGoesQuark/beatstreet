@@ -4,9 +4,10 @@ var overridAccToken = 'BQDAatJKy0qV72XlDC-e50KKhoBpK6SRwn19nzaOYhsBpTW6CQURR_pHQ
 
 export function getClientAuthorization() {
     var scopes = ['playlist-read-private', 'playlist-modify-private', 'streaming', 'user-read-playback-state', 'user-modify-playback-state', 'user-read-currently-playing'],
-        redirectUri = 'http://beatstreet.tech/loginResult',
+        redirectUri = 'http://beatstreet.tech/',
         clientId = '1ee50d582cdf4b418e31e20189774f36',
         state = 'banter';
+    // hello
 
 // Setting credentials can be done in the wrapper's constructor, or using the API object's setters.
     var spotifyApi = new SpotifyWebApi({
