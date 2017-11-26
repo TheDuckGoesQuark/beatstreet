@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Splash.css';
+import * as spot from '../Spotify-Interface.js';
 
 class Splash extends Component {
     spotifyHandle(){
@@ -12,7 +13,7 @@ class Splash extends Component {
                 <div className="App">
                     <h1 className="App-title">BeatStreet</h1>
                     <h3 className="h3-intro">Lets get you listening...</h3>
-                    <div className="Button" onClick={()=>this.spotifyHandle()}>
+                    <div onClick={()=>spot.playSpecificSong('spotify:track:3UCDrOA37BBdcExyIpN3Xj')} className="Button">
                         <h2 className="Reverse-text">Log in with Spotify</h2>
                         <img className="Spotify-logo" src={require("../assets/spotifyLogo.svg")} />
                     </div>

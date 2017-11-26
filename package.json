@@ -11,6 +11,8 @@
     "react-transition-group": "^2.2.1",
     "react-viewport-slider": "^1.0.0",
     "reactstrap": "^4.8.0"
+    "spotify-web-api-node": "^2.5.0"
+]
   },
   "scripts": {
     "start": "react-scripts start",
