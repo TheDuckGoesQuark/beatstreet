@@ -1,6 +1,6 @@
 import SpotifyWebApi from 'spotify-web-api-node';
 
-var overridAccToken = 'BQDAatJKy0qV72XlDC-e50KKhoBpK6SRwn19nzaOYhsBpTW6CQURR_pHQ8IcuxbwYJhNXYlUjVtIBM8-um_AtgniLJtKVoTXfImqdOSqzw7y7i90vXPzML8QH4EDyJ8N75Fkr8TgDAnH7GQZ0RvRmbVgNSaNlOpjeewxxX4qDaFfjqsq2ywMfUY8Okwv4vPlxw';
+var overridAccToken = 'BQADCTT_PTys5c6zJS6HMqssjQWkxjv18SwkMz50iQBGuZgfca6EZPeu20uG6EHAx7ixB7Mw3sb3twnc4s7AkJmx-tkt-YkkpyzNQrTGgT96-GyQV42BmpXre8bXUrYh6OdMOwMmlVxL2CG8zWj5l0KothcOoqnEX_bS1p5zsK_ah_YCyoi7LBoPxB76p4_waQ';
 
 export function getClientAuthorization() {
     var scopes = ['playlist-read-private', 'playlist-modify-private', 'streaming', 'user-read-playback-state', 'user-modify-playback-state', 'user-read-currently-playing'],
@@ -68,7 +68,7 @@ export function pauseSong() {
     spotifyApi.pause();
 }
 
-export function playSong() {
+export function resumeSong() {
     var spotifyApi = new SpotifyWebApi();
 
     localStorage.setItem('accessToken', overridAccToken);
@@ -78,14 +78,19 @@ export function playSong() {
     spotifyApi.play();
 }
 
-export function playSpecificSong(uri) {
+export function playSongs(uris) {
     var spotifyApi = new SpotifyWebApi();
 
     localStorage.setItem('accessToken', overridAccToken);
 
     spotifyApi.setAccessToken(localStorage.getItem('accessToken'));
 
-    spotifyApi.play({
-        context_uri:uri,
-    });
+    spotifyApi.play({ "uris":uris },
+        function(err, body) {
+            if (err) {
+                console.log(err);
+            }
+
+            console.log(body);
+        });
 }
